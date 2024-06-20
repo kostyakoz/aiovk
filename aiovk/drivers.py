@@ -44,7 +44,7 @@ class BaseDriver:
 
 
 class HttpDriver(BaseDriver):
-    def __init__(self, timeout=10, loop=None, session=None):
+    def __init__(self, timeout=30, loop=None, session=None):
         super().__init__(timeout, loop)
         if not session:
             self.session = aiohttp.ClientSession(loop=loop)
